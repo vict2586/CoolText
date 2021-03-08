@@ -1,4 +1,41 @@
 * {
   margin: 0;
+
   box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+.text {
+  --delay: 0s;
+
+  margin: 5vw 5vw;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+.letter {
+  animation-name: letter;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--delay) * 0.1s);
+  animation-timing-function: cubic-bezier(0, 0.73, 0.91, 1.42);
+}
+
+@keyframes letter {
+  0% {
+    opacity: 0;
+    transform: translateY(5vw);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0vw);
+  }
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+span {
+  display: inline-block;
 }
